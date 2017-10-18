@@ -16,7 +16,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'duff/vim-bufonly'
 Plug 'gregsexton/MatchTag', { 'for': ['html', 'css', 'javascript.jsx'] }
 Plug 'sheerun/vim-polyglot'
-Plug 'kristijanhusak/vim-hybrid-material'
 Plug 'Shougo/deoplete.nvim'
 Plug 'Shougo/neosnippet'
 Plug 'dyng/ctrlsf.vim'
@@ -24,6 +23,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vimwiki/vimwiki'
 Plug 'galooshi/vim-import-js', { 'do': 'npm install -g import-js', 'for': 'javascript' }
 Plug 'jreybert/vimagit'
+Plug 'joshdick/onedark.vim'
 
 call plug#end()
 "}}}
@@ -32,9 +32,7 @@ call plug#end()
 filetype plugin indent on                                                       "Enable plugins and indents by filetype
 
 let g:mapleader = ","                                                           "Change leader to a comma
-
-let g:enable_bold_font = 1                                                      "Enable bold font in colorscheme
-let g:enable_italic_font = 1                                                    "Enable italic font in colorscheme
+let g:onedark_terminal_italics = 1                                              "Use italic font in colorscheme
 
 set termguicolors
 set title                                                                       "change the terminal's title
@@ -72,7 +70,7 @@ set secure                                                                      
 
 syntax on                                                                       "turn on syntax highlighting
 
-silent! colorscheme hybrid_material
+silent! colorscheme onedark
 
 " }}}
 " ================ Turn Off Swap Files ============== {{{
@@ -140,7 +138,7 @@ set sidescroll=5
 " }}}
 " ================ Statusline ======================== {{{
 
-hi User1 guifg=#FF0000 guibg=#455A64
+hi User1 guifg=#FF0000 guibg=#2C323C
 set statusline=\ %{toupper(mode())}                                             "Mode
 set statusline+=\ \│\ %{fugitive#head()}                                        "Git branch
 set statusline+=\ \│\ %4F                                                       "File path
